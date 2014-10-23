@@ -1,0 +1,5 @@
+---
+- name: exporting crontab
+  command: >
+    direnv exec . cron-jobs --update-crontab {{ deploy_application_name }}
+    chdir={{ deploy_release_dir }}
